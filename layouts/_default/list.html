@@ -1,0 +1,12 @@
+{{ define "content" }}
+  {{ .Scratch.Set "template" "_default/list.html" }}
+  {{ .Content }}
+  {{ range .Pages }}
+    <div><a href="{{ .URL }}">{{ .Title }}</a></div>
+    <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+    <div>{{ if .Params.tags }}<b>Tags:</b> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+    <div>{{ if .Params.categories }}<b>Categories:</b> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+    <div>{{ if .Params.moods }}<b>Moods:</b> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+    <p>{{.Summary}}</p>
+  {{ end }}
+{{ end }}

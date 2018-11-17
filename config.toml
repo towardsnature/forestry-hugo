@@ -1,0 +1,17 @@
+baseURL = "https://towardsnature.nl/"
+defaultContentLanguage = "nl"
+defaultContentLanguageInSubdir = "true"
+languageCode = "en-us"
+title = "Towards Nature"
+
+[languages]
+  [languages.nl]
+    contentDir = "content/nl"
+    description = "Permacultuur Ontwerp is de sleutel tot duurzaamheid. Tayfun Yalcin, Permacultuurontwerper in Amsterdam die permacultuur en landschapsontwerp levert op basis van natuurlijke balans en duurzaamheid. Duurzame tuinen, Permacultuur, Permacultuurtuin, Permacultu"
+    languageName = "Nederlands"
+    weight = 1
+  [languages.en]
+    contentDir = "content/en"
+    description = "Permaculture Design is the key to sustainability. Tayfun Yalcin, Permaculture Designer in Amsterdam providing Permaculture and Landscape design based on natural balance and sustainability. Sustainable Gardens, Permaculture, Permaculture garden, Permacultu"
+    languageName = "English"
+    weight = 2

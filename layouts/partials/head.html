@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#fff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ .Param "description" }}">
+<link rel="manifest" type="application/manifest+json" href="/manifest.webmanifest">
+<link rel="shortcut icon" type="image/png" href="/favicon.png">
+{{ if .RSSLink -}}<link rel="alternate" href="{{ .RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">{{ end -}}
+{{ if .IsTranslated }}{{ range .Translations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">{{ end }}{{ end }}
+<style>html{font-size:18px}body{max-width:1024px}img{max-width:100%}</style>
+<title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}{{ end }}</title>

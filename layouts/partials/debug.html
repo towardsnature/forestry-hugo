@@ -1,0 +1,14 @@
+{{ if .Site.IsServer }}
+<div style="font-family: monospace; font-size: 14px; background-color: #f1f1f1">
+  <h3>debug</h3>
+  <i>kind</i>: {{ .Page.Kind }}<br>
+  <i>template</i>: {{ .Scratch.Get "template" }}<br>
+  <i>type</i>: {{ .Page.Type }}<br>
+  <h4>.</h4>
+  {{ printf "%#v" . }}
+  <h4>.Site</h4>
+  {{ printf "%#v" $.Site }}
+  <h4>.Page</h4>
+  {{ printf "%#v" $.Page }}
+</div>
+{{ end }}
